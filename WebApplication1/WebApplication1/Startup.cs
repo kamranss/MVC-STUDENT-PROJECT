@@ -23,7 +23,8 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            //services.AddRazorPages();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +43,7 @@ namespace WebApplication1
 
            
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(); // this method reads all static files like images css json files etc
 
             app.UseRouting();
 
@@ -52,9 +53,14 @@ namespace WebApplication1
             {
                 //endpoints.MapControllerRoute(
                 //  "default",
-                //  "{controller=home}/{action=index}/{id?}"
+                //  "{controller}/{action}/{id?}"
                 //);
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                  "default",
+                  "{controller=Home}/{action=Index}/{id?}"
+                );
+
+                //endpoints.MapRazorPages();
             });
         }
     }

@@ -39,3 +39,4 @@ C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\obj\Debu
 C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.pdb
 C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.genruntimeconfig.cache
 C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.CopyComplete
+C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index2.cshtml.g.cs
