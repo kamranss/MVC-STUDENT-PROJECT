@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -16,10 +18,36 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index2()
         {
-            ViewResult result = View();
-            result.ViewName = "Index2";
-            return result;
-            //return View();
+            //ViewResult result = View();
+            //result.ViewName = "Index2";
+            //return result;
+
+            Student student = new Student()
+            {
+                Id = 1,
+                Name = "Test",
+                Age = 1,
+                GroupId = 1,
+            };
+            Student student2 = new Student()
+            {
+                Id = 2,
+                Name = "Test",
+                Age = 1,
+                GroupId = 1,
+            };
+            Student student3 = new Student()
+            {   Id = 3,
+                Name = "Test",
+                Age = 1,
+                GroupId = 1,
+            };
+
+            List<Student> students = new List<Student>();
+            students.Add(student);
+            students.Add(student2);
+            students.Add(student3);
+            return View(students);
         }
 
         // this approach for other side they will use url to get image

@@ -1,2 +1,14 @@
-﻿
-<h1>Salam</h1>
+﻿@using WebApplication1.Models;
+@model List<Student>;
+
+
+<p>Salam necesen</p>
+
+
+@foreach(var item in Model)
+{
+    <p> @item.Name</p>
+    <p>@item.Age</p>
+    <hr />
+}
+
