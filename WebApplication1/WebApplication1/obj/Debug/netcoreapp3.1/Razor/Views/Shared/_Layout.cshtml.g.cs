@@ -12,7 +12,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\Views\_ViewImports.cshtml"
+using WebApplication1.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\Views\_ViewImports.cshtml"
+using WebApplication1.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5245f7828ae89cc3898743001500cc6dbee64822", @"/Views/Shared/_Layout.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4dbb86164f0c4e5801c4dfbd771eb2e1647b022e", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -43,7 +58,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5245f7828ae89cc3898743001500cc6dbee648222793", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5245f7828ae89cc3898743001500cc6dbee648223379", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\Views\Shared\_Layout.cshtml"
@@ -65,7 +80,7 @@ namespace AspNetCore
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5245f7828ae89cc3898743001500cc6dbee648224091", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5245f7828ae89cc3898743001500cc6dbee648224677", async() => {
                 WriteLiteral("\r\n    <h1>Navbar</h1>\r\n        ");
 #nullable restore
 #line 10 "C:\Users\user\Desktop\BackEnd\FirtsTask\WebApplication1\WebApplication1\Views\Shared\_Layout.cshtml"

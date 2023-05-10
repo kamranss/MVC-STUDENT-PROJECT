@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using WebApplication1.Models;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
@@ -43,13 +44,28 @@ namespace WebApplication1.Controllers
                 GroupId = 1,
             };
 
-            List<Student> students = new List<Student>();
-            students.Add(student);
-            students.Add(student2);
-            students.Add(student3);
-            return View(students);
+            List<Student> studentList = new List<Student>();
+            studentList.Add(student);
+            studentList.Add(student2);
+            studentList.Add(student3);
+
+            Group Group = new Group()
+            {
+                Id = 1,
+                Name = "Test",
+            };
+
+
+            HomeVM HomeVM = new HomeVM()
+            {
+                Students = studentList,
+                Group = Group
+            };
+
+            return View(HomeVM);
         }
 
+     
         // this approach for other side they will use url to get image
         public IActionResult index3()
         {

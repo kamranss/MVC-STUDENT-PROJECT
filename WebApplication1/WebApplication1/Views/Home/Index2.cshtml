@@ -1,14 +1,17 @@
-﻿@using WebApplication1.Models;
-@model List<Student>;
+﻿
+@model HomeVM;
 
 
 <p>Salam necesen</p>
 
+<p>@Model.Group.Name</p>
+<hr />
 
-@foreach(var item in Model)
+@foreach(var item in Model.Students)
 {
     <p> @item.Name</p>
     <p>@item.Age</p>
+    <p>@item.GroupId</p>
     <hr />
 }
 
