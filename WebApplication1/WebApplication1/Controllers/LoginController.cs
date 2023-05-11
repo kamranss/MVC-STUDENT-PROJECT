@@ -4,7 +4,7 @@ namespace WebApplication1.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult Index()
+        public IActionResult login()
         {
             return View();
         }
