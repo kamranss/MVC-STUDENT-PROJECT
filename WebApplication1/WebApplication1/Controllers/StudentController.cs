@@ -8,5 +8,13 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult Detail(int id)
+        {
+            return View();
+        }
+        public IActionResult GetStudentsWithGroupid(int id)
+        {
+            return View();
+        }
     }
 }
