@@ -57,7 +57,7 @@ namespace WebApplication1
                 //);
                 endpoints.MapControllerRoute(
                   "default",
-                  "{controller=Home}/{action=Index}/{id?}"
+                  "{controller=Login}/{action=login}/{id?}"
                 );
 
                 //endpoints.MapRazorPages();
