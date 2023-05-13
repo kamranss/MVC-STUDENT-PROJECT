@@ -67,8 +67,10 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Logout()
         {
+
             HttpContext.Session.Clear();
-            return RedirectToAction("Login", "Login");
+            //Response.Redirect("/Login/login");
+            return RedirectToAction("login", "Login");
         }
 
 
