@@ -25,6 +25,7 @@ namespace WebApplication1
         {
             //services.AddRazorPages();
             services.AddControllersWithViews();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +42,7 @@ namespace WebApplication1
                 app.UseHsts();
             }
 
-           
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles(); // this method reads all static files like images css json files etc
 

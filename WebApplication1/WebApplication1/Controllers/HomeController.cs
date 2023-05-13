@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
+using System.Web;
 
 namespace WebApplication1.Controllers
 {
@@ -21,8 +22,8 @@ namespace WebApplication1.Controllers
             Student student = new Student()
             {
                 Id = 1,
-                Name = "Test",
-                Age = 1,
+                Name = "Kamran",
+                Age = 12,
                 GroupId = 1,
             };
             Student student2 = new Student()
@@ -66,8 +67,12 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Logout()
         {
+            HttpContext.Session.Clear();
             return RedirectToAction("Login", "Login");
         }
+
+
+
         public IActionResult Index2()
         {
             //ViewResult result = View();
