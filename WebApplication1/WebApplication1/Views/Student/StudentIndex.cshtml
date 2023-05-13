@@ -1,0 +1,42 @@
+﻿@model HomeVM;
+@{
+    ViewData["Title"] = "StudentIndex";
+}
+
+
+
+
+
+@using (Html.BeginForm("Logout", "Home", FormMethod.Post))
+{
+    <p>User Info</p>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">GroupId</th>
+                <th scope="col">GroupName</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model.Students)
+                {
+                   
+                    <tr>
+                        @*<th scope="row">1</th>*@
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>@item.GroupId</td>
+                        <td>@Model.Group.Name</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+    <hr />
+    <button type="submit">LogOut</button>
+    }
+
