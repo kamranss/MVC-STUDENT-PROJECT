@@ -9,28 +9,32 @@ namespace WebApplication1.Controllers
     {
 
 
-        public IActionResult login( Login loginmodel)
-        {
+        //public IActionResult login( )
+        //{
 
-            ViewData["ExcludeLayout"] = true;
-            string username = loginmodel.Username;
-            string password = loginmodel.Password;
+        //    ViewData["ExcludeLayout"] = true;
+        //    //string username = loginmodel.Username;
+        //    //string password = loginmodel.Password;
 
-            Login login = new Login()
-            {
-                Username = "admin@email.com",
-                Password = "admin"
-            };
-            
-            if (!(login.Username == username && login.Password == password))
-            {
-                Console.WriteLine("hey working");
-               return RedirectToAction("Index", "Home");
-            }
-            return View();
+        //    //Login login = new Login()
+        //    //{
+        //    //    Username = "admin@email.com",
+        //    //    Password = "admin"
+        //    //};
+
+        //    //if ((loginmodel.Username == null || loginmodel.Password == null))
+        //    //{
+        //    //    return View();
+        //    //}
+        //    //if ((login.Username == username && login.Password == password))
+        //    //{
+        //    //    Console.WriteLine("hey working");
+        //    //   return RedirectToAction("Index", "Home");
+        //    //}
+        //    //return View();
 
 
 
-        }
+        //}
     }
 }

@@ -59,7 +59,10 @@ namespace WebApplication1.Controllers
                 Group = Group
             };
 
-            
+            // it receives any data list and links to view in the view without using model we can access this data  
+            ViewBag.Name = "Kamran";
+            ViewData["Name"] = "Kamran";
+            TempData["Name"] = "Kamran";  // TempData is accesible when we use redirect but  ViewBag ViewData not
             return View(HomeVM);
 
         }

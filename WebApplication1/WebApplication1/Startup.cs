@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.DAL;
 
 namespace WebApplication1
 {
@@ -25,6 +27,12 @@ namespace WebApplication1
         {
             //services.addrazorpages();
             services.AddControllersWithViews();
+
+            // connection to sql 
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer("Server=.;Database=P515First;Trusted_Connection=True;MultipleActiveResultSets=true");
+            });
             services.AddSession();
         }
 
@@ -58,7 +66,7 @@ namespace WebApplication1
                 //);
                 endpoints.MapControllerRoute(
                   "default",
-                  "{controller=Login}/{action=login}/{id?}"
+                  "{controller=Home}/{action=Index}/{id?}"
                 );
 
                 //endpoints.MapRazorPages();
