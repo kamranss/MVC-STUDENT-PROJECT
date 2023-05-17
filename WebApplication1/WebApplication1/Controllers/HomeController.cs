@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
 using System.Web;
+using Microsoft.Extensions.Configuration;
+using WebApplication1.DAL;
+using System.Linq;
 
 namespace WebApplication1.Controllers
 {
@@ -13,9 +16,20 @@ namespace WebApplication1.Controllers
         //{
         //    return View();
         //}
+        private readonly IConfiguration _configuration;
+        private readonly AppDbContext _appDbContext;
 
+
+        public HomeController(IConfiguration config, AppDbContext appDbContext)
+        {
+            _configuration = config;
+            _appDbContext = appDbContext;
+        }
         public IActionResult Index()
         {
+
+            Student student1 = _appDbContext.Students.FirstOrDefault(p => p.Id == 2); // getting data from db using method to get only one --- default it returns first data or 0
+            var name = _configuration.GetSection("Name").Value;  // getting data from apsetting.json file
 
             ViewData["ExcludeCSS"] = true;
 

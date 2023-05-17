@@ -15,10 +15,15 @@ namespace WebApplication1
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+
+        private readonly IConfiguration _config;
+
+       
+
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
-        }
+            _config = config;
+        } 
 
         public IConfiguration Configuration { get; }
 
@@ -31,7 +36,9 @@ namespace WebApplication1
             // connection to sql 
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer("Server=.;Database=P515First;Trusted_Connection=True;MultipleActiveResultSets=true");
+                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+               /* options.UseSqlServer(_config["ConnectionString: DefaultConnection"]); */// another approach for accesing Sql connection path
+                //"Server=.;Database=P515First;Trusted_Connection=True;MultipleActiveResultSets=true"
             });
             services.AddSession();
         }
